@@ -14,7 +14,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -57,7 +57,7 @@
         layer_keypad {
             bindings = <
 &trans            &none            &none      &none            &none            &none          &none                                                        &none    &none           &none           &none         &none            &none  &none
-&kp TAB           &kp LG(LS(TAB))  &kp KP_N7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_MINUS   &none                                                        &none    &none           &none           &none         &none            &none  &kp BSLH
+&kp TAB           &kp LG(LS(TAB))  &kp KP_N7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_MINUS   &none                                                        &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &kp BSLH
 &kp LEFT_CONTROL  &kp LG(TAB)      &kp KP_N4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS    &none       &tog 1     &kp LCTRL          &kp RCTRL  &tog 1  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
 &kp LSHFT         &none            &kp KP_N1  &kp KP_N2        &kp KP_N3        &kp BACKSLASH                         &kp LEFT_META      &kp RMETA                   &none           &none           &none         &none            &none  &kp RSHFT
 &trans            &none            &trans     &trans           &trans                          &kp KP_DOT  &kp KP_N0  &kp LALT           &kp RALT   &trans  &kp ESC                  &trans          &trans        &trans           &none  &tog 4
@@ -66,17 +66,17 @@
 
         navigation {
             bindings = <
-&none   &none          &none         &none             &none           &none  &none                                   &none  &none           &none           &none         &none            &none  &none
-&none   &none          &none         &none             &none           &none  &none                                   &none  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &none
-&none   &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none  &none  &none   &none      &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
-&none   &none          &none         &none             &none           &none                 &none      &none                &none           &none           &none         &none            &none  &none
-&tog 4  &none          &none         &none             &none                  &none  &trans  &none      &none  &none  &none                  &none           &none         &none            &none  &none
+&none  &none          &none         &none             &none           &none  &none                                   &none  &none           &none           &none         &none            &none  &none
+&none  &none          &none         &none             &none           &none  &none                                   &none  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &none
+&none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none  &none  &none   &none      &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
+&none  &none          &none         &none             &none           &none                 &none      &none                &none           &none           &none         &none            &none  &none
+&mo 4  &none          &none         &none             &none                  &none  &trans  &none      &none  &none  &none                  &none           &none         &none            &none  &mo 4
             >;
         };
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &trans                                      &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &mo 4
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &trans                                      &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &none
 &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none   &tog 1  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
@@ -86,11 +86,11 @@
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &none                   &none  &none       &none       &none  &none  &trans
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&bootloader     &none         &none         &none         &none         &none         &bl BL_TOG                                    &bl BL_TOG  &none         &none         &none         &none         &none         &bootloader
+&bt BT_CLR_ALL  &none         &none         &none         &none         &none         &bl BL_INC                                    &bl BL_INC  &none         &none         &none         &none         &none         &bt BT_CLR_ALL
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bl BL_DEC  &none   &none      &none  &none   &bl BL_DEC  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&none           &none         &none         &none         &none         &none                             &none      &none                      &none         &none         &none         &none         &none         &none
+&trans          &bt BT_PRV    &none         &none         &out OUT_TOG                &none       &trans  &none      &none  &trans  &trans                    &out OUT_TOG  &none         &none         &bt BT_NXT    &trans
             >;
         };
     };
