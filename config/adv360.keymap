@@ -55,21 +55,21 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp N1         &kp N2            &kp N3          &kp N4                &kp N5  &kp GRAVE                                                                   &kp CAPS   &kp N6  &kp N7                 &kp N8           &kp N9             &kp N0            &mo 3
-&kp TAB    &kp Q          &kp W             &kp E           &kp R                 &kp T   &kp DOUBLE_QUOTES                                                           &kp EQUAL  &kp Y   &kp U                  &kp I            &kp O              &kp P             &kp BSLH
-&kp LCTRL  &kp A          &kp S             &kp D           &kp F                 &kp G   &kp SINGLE_QUOTE   &mkp LCLK    &mkp RCLK        &mkp MB2  &mkp MB1         &kp MINUS  &kp H   &kp J                  &kp K            &kp L              &kp SEMI          &kp RIGHT_CONTROL
-&kp LSHFT  &kp Z          &kp X             &kp C           &kp V                 &kp B                                   &kp TAB          &mkp MB5                              &kp N   &kp M                  &kp COMMA        &kp DOT            &kp SLASH         &kp RSHFT
-&kp HOME   &kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS          &kp ENTER          &lt 2 SPACE  &kp LS(TAB)      &mkp MB4  &lt 1 BACKSPACE  &kp ESC            &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &kp END
+&kp GRAVE      &kp N1         &kp N2            &kp N3          &kp N4                &kp N5  &kp GRAVE                                                               &kp CAPS   &kp N6  &kp N7                 &kp N8           &kp N9             &kp N0            &kp K_LOCK
+&kp TAB        &kp Q          &kp W             &kp E           &kp R                 &kp T   &kp DOUBLE_QUOTES                                                       &kp EQUAL  &kp Y   &kp U                  &kp I            &kp O              &kp P             &kp BSLH
+&kp LCTRL      &kp A          &kp S             &kp D           &kp F                 &kp G   &kp SINGLE_QUOTE   &mkp LCLK  &mkp RCLK        &mkp MB2  &mkp MB1       &kp MINUS  &kp H   &kp J                  &kp K            &kp L              &kp SEMI          &kp RIGHT_CONTROL
+&kp LSHFT      &kp Z          &kp X             &kp C           &kp V                 &kp B                                 &kp TAB          &mkp MB5                            &kp N   &kp M                  &kp COMMA        &kp DOT            &kp SLASH         &kp RSHFT
+&kp LEFT_META  &kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS          &lt 2 ENTER        &kp SPACE  &kp LS(TAB)      &mkp MB4  &kp BACKSPACE  &lt 1 ESC          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &kp RIGHT_META
             >;
         };
 
-        layer_keypad {
+        keypad {
             bindings = <
-&trans            &none            &none      &none            &none            &none          &none                                                        &none    &none           &none           &none         &none            &none  &none
-&kp TAB           &kp LG(LS(TAB))  &kp KP_N7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_MINUS   &none                                                        &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &kp BSLH
-&kp LEFT_CONTROL  &kp LG(TAB)      &kp KP_N4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS    &none       &tog 1     &kp LCTRL          &kp RCTRL  &tog 1  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
-&kp LSHFT         &none            &kp KP_N1  &kp KP_N2        &kp KP_N3        &kp BACKSLASH                         &kp LEFT_META      &kp RMETA                   &none           &none           &none         &none            &none  &kp RSHFT
-&trans            &none            &trans     &trans           &trans                          &kp KP_DOT  &kp KP_N0  &kp LALT           &kp RALT   &trans  &kp ESC                  &trans          &trans        &trans           &none  &tog 3
+&trans            &none      &none         &none   &none   &none          &none                                                 &none   &none           &none           &none         &none            &none  &none
+&trans            &none      &kp N7        &kp N8  &kp N9  &kp EQUAL      &none                                                 &none   &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &kp BSLH
+&kp LEFT_CONTROL  &kp COLON  &kp N4        &kp N5  &kp N6  &kp MINUS      &none       &tog 1     &kp LCTRL      &trans  &trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
+&kp LSHFT         &kp N0     &kp NUMBER_1  &kp N2  &kp N3  &kp BACKSLASH                         &trans         &trans                  &none           &none           &none         &none            &none  &kp RSHFT
+&trans            &none      &trans        &trans  &trans                 &kp KP_DOT  &kp KP_N0  &kp LALT       &trans  &trans  &trans                  &trans          &trans        &trans           &none  &tog 3
             >;
         };
 
