@@ -41,16 +41,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        right-mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <37 38>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp GRAVE  &kp N1          &kp N2                &kp N3          &kp N4            &kp N5  &kp DEL                                                                    &kp CAPS   &kp N6  &kp N7             &kp N8           &kp N9                 &kp N0           &mo 4
-&kp TAB    &kp Q           &kp W                 &kp E           &kp R             &kp T   &kp LG(C)                                                                  &kp EQUAL  &kp Y   &kp U              &kp I            &kp O                  &kp P            &kp BSLH
-&kp LCTRL  &kp A           &kp S                 &kp D           &kp F             &kp G   &kp LG(V)  &mkp LCLK    &mkp RCLK         &kp RCTRL       &mo_tog 1 1      &kp MINUS  &kp H   &kp J              &kp K            &kp L                  &kp SEMI         &kp SQT
-&kp LSHFT  &kp Z           &kp X                 &kp C           &kp V             &kp B                           &kp UP_ARROW      &kp RIGHT_META                              &kp N   &kp M              &kp COMMA        &kp DOT                &kp SLASH        &kp RSHFT
-&kp HOME   &kp LEFT_ARROW  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp LEFT_BRACKET          &kp ENTER  &lt 2 SPACE  &kp DOWN          &kp RALT        &lt 1 BACKSPACE  &kp ESC            &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_ARROW  &kp END
+&kp GRAVE  &kp N1         &kp N2            &kp N3          &kp N4                &kp N5  &kp GRAVE                                                                   &kp CAPS   &kp N6  &kp N7                 &kp N8           &kp N9             &kp N0            &mo 3
+&kp TAB    &kp Q          &kp W             &kp E           &kp R                 &kp T   &kp DOUBLE_QUOTES                                                           &kp EQUAL  &kp Y   &kp U                  &kp I            &kp O              &kp P             &kp BSLH
+&kp LCTRL  &kp A          &kp S             &kp D           &kp F                 &kp G   &kp SINGLE_QUOTE   &mkp LCLK    &mkp RCLK        &mkp MB2  &mkp MB1         &kp MINUS  &kp H   &kp J                  &kp K            &kp L              &kp SEMI          &kp RIGHT_CONTROL
+&kp LSHFT  &kp Z          &kp X             &kp C           &kp V                 &kp B                                   &kp TAB          &mkp MB5                              &kp N   &kp M                  &kp COMMA        &kp DOT            &kp SLASH         &kp RSHFT
+&kp HOME   &kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS          &kp ENTER          &lt 2 SPACE  &kp LS(TAB)      &mkp MB4  &lt 1 BACKSPACE  &kp ESC            &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &kp END
             >;
         };
 
@@ -60,7 +69,7 @@
 &kp TAB           &kp LG(LS(TAB))  &kp KP_N7  &kp KP_NUMBER_8  &kp KP_N9        &kp KP_MINUS   &none                                                        &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &kp BSLH
 &kp LEFT_CONTROL  &kp LG(TAB)      &kp KP_N4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS    &none       &tog 1     &kp LCTRL          &kp RCTRL  &tog 1  &none    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
 &kp LSHFT         &none            &kp KP_N1  &kp KP_N2        &kp KP_N3        &kp BACKSLASH                         &kp LEFT_META      &kp RMETA                   &none           &none           &none         &none            &none  &kp RSHFT
-&trans            &none            &trans     &trans           &trans                          &kp KP_DOT  &kp KP_N0  &kp LALT           &kp RALT   &trans  &kp ESC                  &trans          &trans        &trans           &none  &tog 4
+&trans            &none            &trans     &trans           &trans                          &kp KP_DOT  &kp KP_N0  &kp LALT           &kp RALT   &trans  &kp ESC                  &trans          &trans        &trans           &none  &tog 3
             >;
         };
 
@@ -70,17 +79,7 @@
 &none  &none          &none         &none             &none           &none  &none                                   &none  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none  &none
 &none  &kp LEFT_META  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none  &none  &none   &none      &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
 &none  &none          &none         &none             &none           &none                 &none      &none                &none           &none           &none         &none            &none  &none
-&mo 4  &none          &none         &none             &none                  &none  &trans  &none      &none  &none  &none                  &none           &none         &none            &none  &mo 4
-            >;
-        };
-
-        layer_fn {
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &trans                                      &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &tog 1  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&mo 3  &none          &none         &none             &none                  &none  &trans  &none      &none  &none  &none                  &none           &none         &none            &none  &mo 3
             >;
         };
 
