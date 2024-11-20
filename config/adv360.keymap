@@ -56,7 +56,7 @@
         default_layer {
             bindings = <
 &kp GLOBE      &kp N1         &kp N2            &kp N3          &kp N4                &kp N5  &kp GRAVE                                                               &kp CAPS   &kp N6  &kp N7                 &kp N8           &kp N9             &kp N0            &kp K_LOCK
-&kp TAB        &kp Q          &kp W             &kp E           &kp R                 &kp T   &kp DOUBLE_QUOTES                                                       &kp EQUAL  &kp Y   &kp U                  &kp I            &kp O              &kp P             &kp BSLH
+&kp LEFT_ALT   &kp Q          &kp W             &kp E           &kp R                 &kp T   &kp DOUBLE_QUOTES                                                       &kp EQUAL  &kp Y   &kp U                  &kp I            &kp O              &kp P             &kp BSLH
 &kp LCTRL      &kp A          &kp S             &kp D           &kp F                 &kp G   &kp SINGLE_QUOTE   &mkp MB1   &mkp MB2         &mkp MB2  &mkp MB1       &kp MINUS  &kp H   &kp J                  &kp K            &kp L              &kp SEMI          &kp RIGHT_CONTROL
 &kp LSHFT      &kp Z          &kp X             &kp C           &kp V                 &kp B                                 &kp TAB          &mkp MB5                            &kp N   &kp M                  &kp COMMA        &kp DOT            &kp SLASH         &kp RSHFT
 &kp LEFT_META  &kp LESS_THAN  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS          &lt 2 ENTER        &kp SPACE  &kp LS(TAB)      &mkp MB4  &kp BACKSPACE  &lt 1 ESC          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &kp RIGHT_META
@@ -65,11 +65,11 @@
 
         keypad {
             bindings = <
-&trans            &none     &none         &none   &none   &none      &none                                                 &none   &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT       &none   &none
-&trans            &none     &kp N7        &kp N8  &kp N9  &kp N0     &none                                                 &none   &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none   &kp BSLH
-&kp LEFT_CONTROL  &kp SEMI  &kp N4        &kp N5  &kp N6  &kp MINUS  &none       &tog 1     &kp LCTRL      &trans  &trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none   &none
-&kp LSHFT         &kp N0    &kp NUMBER_1  &kp N2  &kp N3  &kp EQUAL                         &trans         &trans                  &none           &none           &none         &none            &none   &kp RSHFT
-&mo 3             &trans    &trans        &trans  &trans             &kp KP_DOT  &kp KP_N0  &kp LALT       &trans  &trans  &trans                  &trans          &trans        &trans           &trans  &mo 3
+&trans  &none     &none         &none   &none   &none      &none                                                 &none   &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT       &none   &none
+&trans  &none     &kp N7        &kp N8  &kp N9  &kp N0     &none                                                 &none   &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none   &trans
+&trans  &kp SEMI  &kp N4        &kp N5  &kp N6  &kp MINUS  &none       &tog 1     &kp LCTRL      &trans  &trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none   &trans
+&trans  &kp N0    &kp NUMBER_1  &kp N2  &kp N3  &kp EQUAL                         &trans         &trans                  &none           &none           &none         &none            &none   &trans
+&mo 3   &trans    &trans        &trans  &trans             &kp KP_DOT  &kp KP_N0  &kp LALT       &trans  &trans  &trans                  &trans          &trans        &trans           &trans  &mo 3
             >;
         };
 
